@@ -1,1 +1,50 @@
 /* PHASE 11: Icons */
+[class*="icon-"] {
+  background-image: url("../images/sprite.png");
+  background-size: 25px 250px;
+  display: inline-block;
+  width: 25px;
+  height: 0px;
+  overflow: hidden;
+  padding-top: 25px;
+}
+
+.icon-comment:hover {
+  background-position: 0% 11%;
+}
+
+.icon-reblog {
+  background-position: 0% 45%;
+}
+
+.icon-reblog:hover {
+  background-position: 0% 56%;
+}
+
+.icon-favorite {
+  background-position: 0% 23%;
+}
+.icon-favorite:hover {
+  background-position: 0% 34%;
+}
+
+[class*="icon-small"] {
+  width: 20px;
+  /*border: 1px solid black;*/
+}
+
+.icon-small-wall {
+  background-position: 0 -225px;
+}
+
+.icon-small-about {
+  background-position: 0 -175px;
+}
+
+.icon-small-friends {
+  background-position: 0 -150px;
+}
+
+.icon-small-photos {
+  background-position: 0 -200px;
+}
