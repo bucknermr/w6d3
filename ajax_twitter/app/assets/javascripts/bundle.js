@@ -106,36 +106,20 @@ class FollowToggle {
     }
   }
 
-  // handleClick(event) {
-  //   event.preventDefault();
-  //   let promise;
-  //
-  //   if(this.followState){
-  //     promise = APIUtil.unfollowUser(this.userId);
-  //   }else{
-  //     promise = APIUtil.followUser(this.userId);
-  //   }
-  //
-  //   promise
-  //     .then(this.updateFollowState)
-  //     .then(this.render)
-  //     .catch(this.errorMessage);
-  // }
-
   handleClick(event) {
     event.preventDefault();
-    // debugger
+    let promise;
+
     if(this.followState){
-      APIUtil.unfollowUser(this.userId)
-        .then(this.updateFollowState)
-        .then(this.render)
-        .fail(this.errorMessage);
+      promise = APIUtil.unfollowUser(this.userId);
     }else{
-      APIUtil.followUser(this.userId)
-        .then(this.updateFollowState)
-        .then(this.render)
-        .fail(this.errorMessage);
+      promise = APIUtil.followUser(this.userId);
     }
+
+    promise
+      .then(this.updateFollowState)
+      .then(this.render)
+      .fail(this.errorMessage);
   }
 
   updateFollowState(){
