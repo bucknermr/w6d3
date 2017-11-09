@@ -21,10 +21,14 @@ class FollowToggle {
     } else {
       this.$el.text("Follow");
     }
+
+    this.$el.prop("disabled", false);
   }
 
   handleClick(event) {
     event.preventDefault();
+    this.$el.prop("disabled", true);
+
     let promise;
 
     if(this.followState){
